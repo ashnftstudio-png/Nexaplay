@@ -1,0 +1,12 @@
+@keyframes np-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes np-scale-in { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+@keyframes np-slide-up { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
+@keyframes np-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.animate-fade-in { animation: np-fade-in var(--duration-normal) ease-out both; }
+.animate-scale-in { animation: np-scale-in var(--duration-normal) ease-out both; }
+.animate-slide-up { animation: np-slide-up var(--duration-slow) ease-out both; }
+.hover-lift { transition: transform var(--duration-normal), border-color var(--duration-normal), background var(--duration-normal); }
+.hover-lift:hover { transform: translateY(-0.25rem); }
+.focus-ring { outline: none; }
+.focus-ring:focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 3px; }
+.loading-shimmer { background: linear-gradient(90deg, rgba(255,255,255,.06), rgba(255,255,255,.16), rgba(255,255,255,.06)); background-size: 200% 100%; animation: np-shimmer 1.4s linear infinite; }

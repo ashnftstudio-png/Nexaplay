@@ -3,7 +3,7 @@ import { BrandMark } from "@/components/ui/brand-mark";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#070a12]/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-[var(--z-sticky)] border-b border-white/10 bg-[var(--background)]/85 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <BrandMark />
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
