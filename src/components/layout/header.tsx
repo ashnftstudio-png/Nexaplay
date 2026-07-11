@@ -1,5 +1,6 @@
 import { primaryNavigation } from "@/config/navigation";
 import { BrandMark } from "@/components/ui/brand-mark";
+import { UserMenu } from "@/components/profile";
 
 export function Header() {
   return (
@@ -13,14 +14,8 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
-          <button className="hidden rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-cyan-300/50 hover:text-white md:inline-flex">
-            Sign in
-          </button>
-          <button className="rounded-full bg-cyan-300 px-4 py-2 text-sm font-black text-slate-950 shadow-[0_0_28px_rgba(34,211,238,0.28)] transition hover:bg-cyan-200">
-            Join beta
-          </button>
-        </div>
+        <UserMenu />
+
       </div>
     </header>
   );

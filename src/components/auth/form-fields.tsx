@@ -1,0 +1,5 @@
+"use client";
+import { useId, useState, type InputHTMLAttributes } from "react";
+import { Button, Input } from "@/components/ui";
+export function Field({ label, error, ...props }: InputHTMLAttributes<HTMLInputElement> & { label: string; error?: string }) { const id = useId(); return <div className="space-y-2"><label htmlFor={id} className="text-sm font-bold text-slate-200">{label}</label><Input id={id} aria-invalid={!!error} aria-describedby={error ? `${id}-error` : undefined} {...props} />{error && <p id={`${id}-error`} role="alert" className="text-sm text-rose-200">{error}</p>}</div>; }
+export function PasswordField(props: Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & { label: string; error?: string }) { const [show, setShow] = useState(false); return <div className="relative"><Field {...props} type={show ? "text" : "password"} /><Button type="button" variant="ghost" className="absolute right-2 top-8 min-h-8 px-3" onClick={() => setShow((v) => !v)} aria-label={show ? "Hide password" : "Show password"}>{show ? "Hide" : "Show"}</Button></div>; }
